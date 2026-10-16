@@ -1,0 +1,34 @@
+name: app_locker
+description: "App Locker 100% local: bloqueo de aplicaciones por PIN, patrón o biometría con detección en tiempo real vía AccessibilityService."
+publish_to: "none"
+version: 1.0.0+1
+
+environment:
+  # go_router 18.x exige Dart ^3.12 y Flutter >= 3.44. Ajusta si tu SDK es menor.
+  sdk: ^3.12.0
+  flutter: ">=3.44.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  flutter_localizations:
+    sdk: flutter
+
+  # Navegación declarativa con soporte de rutas dinámicas (/lock/pin?pkg=...).
+  go_router: ^18.1.0
+  # Preferencias locales sincronizadas con Kotlin (mapa de apps bloqueadas).
+  shared_preferences: ^2.5.6
+  # Hashes de PIN/patrón cifrados en reposo (Keystore RSA-OAEP + AES-GCM).
+  flutter_secure_storage: ^11.2.0
+  # Autenticación biométrica con fallback a credencial del dispositivo.
+  local_auth: ^3.0.2
+  # SHA-256 para hashear credenciales de cada app (con salt aleatorio).
+  crypto: ^3.0.7
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^6.0.0
+
+flutter:
+  uses-material-design: true

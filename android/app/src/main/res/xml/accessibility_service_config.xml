@@ -1,0 +1,23 @@
+<!--
+  Configuración del AccessibilityService de App Locker.
+
+  - typeWindowStateChanged: único evento necesario. Se dispara cuando la
+    ventana en primer plano CAMBIA (nueva activity/ventana), que es justo el
+    momento en que hay que decidir si hay que bloquear el paquete detectado.
+    No consume batería en reposo porque no hay polling: es push del sistema.
+  - notificationTimeout=100: coalesce ráfagas de eventos (p. ej. apps que
+    abren varias ventanas seguidas) para no procesar trabajo redundante.
+  - canRetrieveWindowContent=false: NO inspeccionamos el contenido de las
+    ventanas (privacidad total, nada sale del dispositivo). Solo se lee
+    event.packageName, que el sistema entrega aunque este flag sea false.
+  - flagDefault: sin flags extra (no hace falta leer textos ni gestos).
+-->
+<accessibility-service xmlns:android="http://schemas.android.com/apk/res/android"
+    android:accessibilityEventTypes="typeWindowStateChanged"
+    android:accessibilityFeedbackType="feedbackGeneric"
+    android:accessibilityFlags="flagDefault"
+    android:canRetrieveWindowContent="false"
+    android:description="@string/accessibility_service_description"
+    android:isAccessibilityTool="false"
+    android:notificationTimeout="100"
+    android:summary="@string/accessibility_service_summary" />

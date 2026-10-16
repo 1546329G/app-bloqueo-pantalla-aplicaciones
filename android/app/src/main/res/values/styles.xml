@@ -1,0 +1,26 @@
+<resources>
+    <!-- Splash mientras arranca el motor Flutter de la UI principal. -->
+    <style name="LaunchTheme" parent="@android:style/Theme.Light.NoTitleBar">
+        <item name="android:windowBackground">@drawable/launch_background</item>
+    </style>
+
+    <!-- Tema normal de la actividad Flutter principal. -->
+    <style name="NormalTheme" parent="@android:style/Theme.Light.NoTitleBar">
+        <item name="android:windowBackground">?android:colorBackground</item>
+    </style>
+
+    <!-- Pantalla de bloqueo: ventana opaca con fondo oscuro para cubrir
+         la app bloqueada. El UI del bloqueo (scrim + pad de patron/PIN)
+         lo pinta Flutter encima. FLAG_SECURE y excluir de recientes
+         se aplican en codigo. -->
+    <style name="LockScreenTheme" parent="@android:style/Theme.NoTitleBar">
+        <item name="android:windowBackground">@color/lock_screen_background</item>
+        <item name="android:colorBackground">@color/lock_screen_background</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowDrawsSystemBarBackgrounds">true</item>
+        <item name="android:statusBarColor">@color/lock_screen_background</item>
+        <item name="android:navigationBarColor">@color/lock_screen_background</item>
+    </style>
+</resources>

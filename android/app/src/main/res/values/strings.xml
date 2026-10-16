@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">App Locker</string>
+
+    <!-- AccessibilityService -->
+    <string name="accessibility_service_label">App Locker</string>
+    <string name="accessibility_service_summary">Comprueba qué aplicación se abre para mostrar su pantalla de bloqueo.</string>
+    <string name="accessibility_service_description">App Locker usa este servicio de accesibilidad para saber, en tiempo real, qué aplicación pasas a primer plano y mostrar al instante su pantalla de bloqueo (PIN, patrón o biometría) si la tienes protegida.\n\nQué NO hace:\n• No lee el contenido de tus pantallas ni lo que escribes.\n• No envía ningún dato: todo se procesa y guarda solo en este dispositivo.\n\nSin este permiso el bloqueo de aplicaciones no puede funcionar.</string>
+
+    <!-- Notificación del servicio en primer plano -->
+    <string name="keepalive_channel_name">Protección activa</string>
+    <string name="keepalive_channel_description">Mantiene el bloqueador de aplicaciones activo en todo momento.</string>
+    <string name="keepalive_notification_title">App Locker está protegiendo tus apps</string>
+    <string name="keepalive_notification_text">Toca para abrir la configuración.</string>
+</resources>

@@ -1,0 +1,5 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Flutter necesita INTERNET en debug para el hot reload / VM service.
+         La app final (release) NO usa red: es 100% local. -->
+    <uses-permission android:name="android.permission.INTERNET" />
+</manifest>
